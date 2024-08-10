@@ -1,4 +1,4 @@
-
+import os
 from pathlib import Path
 import dj_database_url
 from decouple import config 
@@ -11,12 +11,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-m8zlgor19u7*6o)xc1ib$_l4rc0!$k2mk6o(aeas2%w!#^@@q@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(',')
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -98,7 +98,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse(config("DATABASE_URL"))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
