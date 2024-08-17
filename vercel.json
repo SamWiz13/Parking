@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "parking/wsgi.py",
+        "user": "@vercel/python",
+        "config": {"maxLambdaSize":"1000mb", "runtime":"python3.12"}
+    }],
+    "routers" :[
+        {
+            "src": "/(.*)",
+            "dest": "parking/wsgi.py"
+        }
+    ]
+}
