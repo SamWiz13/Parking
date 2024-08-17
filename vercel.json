@@ -4,7 +4,7 @@
         "user": "@vercel/python",
         "config": {"maxLambdaSize":"1000mb", "runtime":"python3.12"}
     }],
-    "routers" :[
+    "routes" :[
         {
             "src": "/(.*)",
             "dest": "parking/wsgi.py"
